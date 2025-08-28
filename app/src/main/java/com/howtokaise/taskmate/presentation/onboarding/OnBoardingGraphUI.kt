@@ -1,4 +1,4 @@
-package com.howtokaise.taskmate.Presentation.onboarding
+package com.howtokaise.taskmate.presentation.onboarding
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
@@ -17,11 +17,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun OnboardingGraphUI(onBoardingModel: OnBoardingModel) {
+fun OnBoardingGraphUI(OnBoardingModel : OnBoardingModel) {
 
     Column {
         Image(
-            painter = painterResource(id = onBoardingModel.image),
+            painter = painterResource(id = OnBoardingModel.image),
             contentDescription = null,
             modifier = Modifier
                 .fillMaxWidth()
@@ -30,7 +30,7 @@ fun OnboardingGraphUI(onBoardingModel: OnBoardingModel) {
         Spacer(modifier = Modifier.height(50.dp))
 
         Text(
-            text = onBoardingModel.title,
+            text = OnBoardingModel.title,
             modifier = Modifier.fillMaxWidth(),
             fontSize = 20.sp,
             textAlign = TextAlign.Center,
@@ -40,7 +40,7 @@ fun OnboardingGraphUI(onBoardingModel: OnBoardingModel) {
         Spacer(modifier = Modifier.height(15.dp))
 
         Text(
-            text = onBoardingModel.description,
+            text = OnBoardingModel.description,
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(25.dp,0.dp),
@@ -57,5 +57,5 @@ fun OnboardingGraphUI(onBoardingModel: OnBoardingModel) {
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun hey(modifier: Modifier = Modifier) {
-    OnboardingGraphUI(OnBoardingModel.FirstPage)
+    OnBoardingGraphUI(OnBoardingModel.FirstPage)
 }

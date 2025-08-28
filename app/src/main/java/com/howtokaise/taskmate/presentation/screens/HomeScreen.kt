@@ -1,4 +1,4 @@
-package com.howtokaise.taskmate.Presentation.screens
+package com.howtokaise.taskmate.presentation.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier

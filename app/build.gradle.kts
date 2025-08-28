@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.howtokaise.taskmate"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.howtokaise.taskmate"
@@ -58,7 +58,9 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     // splash screen
-    implementation("androidx.core:core-splashscreen:1.0.0")
+    implementation("androidx.core:core-splashscreen:1.0.1")
     // navigation
     implementation("androidx.navigation:navigation-compose:2.9.3")
+    // datastore
+    implementation("androidx.datastore:datastore-preferences:1.1.7")
 }

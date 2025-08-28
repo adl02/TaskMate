@@ -4,9 +4,9 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.howtokaise.taskmate.Presentation.onboarding.OnBoardingScreen
-import com.howtokaise.taskmate.Presentation.screens.EditScreen
-import com.howtokaise.taskmate.Presentation.screens.HomeScreen
+import com.howtokaise.taskmate.presentation.screens.EditScreen
+import com.howtokaise.taskmate.presentation.screens.HomeScreen
+
 
 @Composable
 fun NavGraph() {
@@ -20,9 +20,6 @@ fun NavGraph() {
         }
         composable(Route.EditScreen.route){
             EditScreen()
-        }
-        composable(Route.OnBoarding.route){
-            OnBoardingScreen()
         }
     }
 }
