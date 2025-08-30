@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -33,6 +34,7 @@ fun OnBoardingGraphUI(OnBoardingModel : OnBoardingModel) {
             text = OnBoardingModel.title,
             modifier = Modifier.fillMaxWidth(),
             fontSize = 20.sp,
+            fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
             style = MaterialTheme.typography.titleMedium,
             color = MaterialTheme.colorScheme.onBackground
@@ -58,4 +60,14 @@ fun OnBoardingGraphUI(OnBoardingModel : OnBoardingModel) {
 @Composable
 fun hey(modifier: Modifier = Modifier) {
     OnBoardingGraphUI(OnBoardingModel.FirstPage)
+}
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun ey(modifier: Modifier = Modifier) {
+    OnBoardingGraphUI(OnBoardingModel.SecondPage)
+}
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun y(modifier: Modifier = Modifier) {
+    OnBoardingGraphUI(OnBoardingModel.ThirdPage)
 }

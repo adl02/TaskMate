@@ -10,18 +10,18 @@ sealed class OnBoardingModel(
     val image : Int
 ) {
     data object FirstPage : OnBoardingModel(
-        title = "Hey there its me",
-        description = "Hey there its me your love my love",
-        image = R.drawable.to_to
+        title = "Organize Your Day",
+        description = "Stay on top of your tasks with a simple and powerful To-Do List app.",
+        image = R.drawable.first
     )
     data object SecondPage : OnBoardingModel(
-        title = "Hey there its me",
-        description = "Hey there its me your love my love",
-        image = R.drawable.to_to
+        title = "Add, Edit, Delete",
+        description = "Quickly add new tasks, update them, or remove the ones you don’t need.",
+        image = R.drawable.second
     )
     data object ThirdPage : OnBoardingModel(
-        title = "Hey there its me",
-        description = "Hey there its me your love my love",
-        image = R.drawable.to_to
+        title = "Track Your Progress",
+        description = "Mark tasks as completed and achieve your daily goals.",
+        image = R.drawable.third
     )
 }

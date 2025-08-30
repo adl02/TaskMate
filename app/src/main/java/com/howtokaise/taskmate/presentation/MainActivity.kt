@@ -4,16 +4,22 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.howtokaise.taskmate.presentation.onboarding.OnBoardingScreen
 import com.howtokaise.taskmate.presentation.onboarding.OnBoardingUtils
+import com.howtokaise.taskmate.presentation.screens.HomeScreen
 import com.howtokaise.taskmate.presentation.ui.theme.TaskMateTheme
 import kotlinx.coroutines.launch
 
@@ -24,6 +30,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        installSplashScreen()
         setContent {
             TaskMateTheme {
                 Surface(
@@ -31,30 +38,24 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     if (onboardingUtils.isOnboardingCompleted()) {
-                        Show()
+                       HomeScreen()
                     } else {
-                        ll()
+                        Boarding()
                     }
                 }
             }
         }
     }
 
-    @Composable
-    private fun Show() {
-        Column {
-            Text(text = "HOme Screen")
-        }
-    }
 
     @Composable
-    private fun ll() {
+    private fun Boarding() {
         val scope = rememberCoroutineScope()
         OnBoardingScreen {
             onboardingUtils.setOnboardingCompleted()
             scope.launch {
                 setContent {
-                    Show()
+                    HomeScreen()
                 }
             }
         }
