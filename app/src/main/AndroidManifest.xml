@@ -15,7 +15,6 @@
         <activity
             android:name=".presentation.MainActivity"
             android:exported="true"
-
             android:theme="@style/App.Starting.Theme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

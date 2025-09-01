@@ -27,9 +27,10 @@ class MainActivity : ComponentActivity() {
 
     private val onboardingUtils by lazy { OnBoardingUtils(this) }
     override fun onCreate(savedInstanceState: Bundle?) {
+        installSplashScreen()
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        installSplashScreen()
+
         val db = Room.databaseBuilder(
             applicationContext,
             TaskDatabase::class.java,

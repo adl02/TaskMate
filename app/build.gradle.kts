@@ -60,14 +60,14 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     // splash screen
-    implementation("androidx.core:core-splashscreen:1.0.1")
+    implementation(libs.androidx.core.splashscreen)
     // navigation
-    implementation("androidx.navigation:navigation-compose:2.9.3")
+    implementation(libs.androidx.navigation.compose)
     // datastore
-    implementation("androidx.datastore:datastore-preferences:1.1.7")
+    implementation(libs.androidx.datastore.preferences)
     // RoomDatabase
-    implementation("androidx.room:room-runtime:2.7.2")
-    kapt("androidx.room:room-compiler:2.7.2")
-    implementation ("androidx.room:room-ktx:2.7.2")
+    implementation(libs.androidx.room.runtime)
+    kapt(libs.androidx.room.compiler)
+    implementation (libs.androidx.room.ktx)
 
 }

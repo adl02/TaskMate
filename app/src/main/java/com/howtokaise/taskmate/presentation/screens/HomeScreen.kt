@@ -1,6 +1,5 @@
 package com.howtokaise.taskmate.presentation.screens
 
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -54,7 +53,6 @@ import androidx.compose.ui.unit.sp
 import com.howtokaise.taskmate.domain.database.Task
 import com.howtokaise.taskmate.presentation.AppViewmodel
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun HomeScreen(viewmodel: AppViewmodel) {
     val tasks by viewmodel.sortedTask.collectAsState()
@@ -80,12 +78,16 @@ fun HomeScreen(viewmodel: AppViewmodel) {
             }
         }
     ) { innerPadding ->
-        Column(modifier = Modifier.padding(innerPadding)) {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(if (isDarkTheme) Color.Black else Color.White)
+                .padding(innerPadding)
+        ) {
 
             Card(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .background(if (isDarkTheme) Color.Black else Color.White),
+                    .fillMaxWidth(),
                 colors = CardDefaults.cardColors(containerColor = Color(0xFF2E7D32)),
                 shape = RectangleShape,
                 elevation = CardDefaults.cardElevation(defaultElevation = 6.dp)
@@ -116,7 +118,7 @@ fun HomeScreen(viewmodel: AppViewmodel) {
                 }
             }
             val listState = rememberLazyListState()
-            LazyColumn (state = listState){
+            LazyColumn(state = listState) {
                 items(tasks, key = { it.id }) { task ->
 
                     val dismissState = rememberSwipeToDismissBoxState(
