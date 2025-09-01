@@ -25,8 +25,7 @@ TaskMate is a modern, minimal, and efficient to-do app built using **Jetpack Com
 | UI            | Jetpack Compose, Material3                   |
 | Architecture  | MVVM, StateFlow, ViewModel                   |
 | Local Storage | Room Database                                |
-| Navigation    | Navigation Compose                           |
-| State Saving  | DataStore Preferences (optional)             |
+| State Saving  | DataStore Preferences                        |
 
 ---
 
@@ -45,32 +44,28 @@ TaskMate is a modern, minimal, and efficient to-do app built using **Jetpack Com
     <td><img src="screenshots/Splash_Screen.jpg" width="200"/></td>
     <td><img src="screenshots/OnBoarding1.jpg" width="200"/></td>
     <td><img src="screenshots/OnBoarding2.jpg" width="200"/></td>
-    <td><img src="screenshots/OnBoarding3.jpg" width="200"/></td>
+    <td><img src="screenshots/Onboarding3.jpg" width="200"/></td>
   </tr>
 </table>
 
 ---
 
-### 🟢 Home & Add/Edit Tasks
+### 🟢 Home & Add/Edit/Delete Tasks
 
 <table>
   <tr>
     <td><b>Home</b></td>
     <td><b>Add Task</b></td>
     <td><b>Edit Task</b></td>
+    <td><b>Delete Task</b></td>
   </tr>
   <tr>
     <td><img src="screenshots/Home_Screen.jpg" width="250"/></td>
     <td><img src="screenshots/Add_Tasks.jpg" width="250"/></td>
     <td><img src="screenshots/Edit_Tasks.jpg" width="250"/></td>
+    <td><img src="screenshots/Delete_Tasks.jpg" width="250"/></td>
   </tr>
 
 </table>
 
 ---
-
-### 🔵 Delete Task
-
-<p align="center">
-  <img src="screenshots/Delete_Tasks.jpg" width="250"/>
-</p>
