@@ -1,57 +1,76 @@
-# TaskMate ✅
-_A simple and modern task management app built with Jetpack Compose and MVVM_
+# ✅ TaskMate - Jetpack Compose To-Do App
 
-## 📌 Overview
-TaskMate is a productivity app that helps you stay organized by managing your daily tasks.  
-It allows you to:
-- Add new tasks
-- Edit existing tasks
-- Mark tasks as completed (with strike-through effect & faded UI)
-- Delete tasks with swipe-to-dismiss
-- Keep tasks sorted (pending tasks stay at the top, completed at the bottom)
-
-The app is built entirely with **Jetpack Compose** and follows **MVVM architecture** using a **Room database** for persistent storage.
-
----
-
-## 🛠️ Tech Stack
-- **Kotlin**
-- **Jetpack Compose** (UI)
-- **ViewModel & StateFlow** (state management)
-- **Room Database** (local storage)
-- **Material 3 Components** (modern UI)
-- **Swipe to Dismiss** API (for deleting tasks)
+TaskMate is a modern, minimal, and efficient to-do app built using **Jetpack Compose**, **Room Database**, and **MVVM architecture**. It helps you stay organized by managing your tasks with a clean and intuitive UI.
 
 ---
 
 ## 🚀 Features
-- ✨ Modern UI with Material 3 & dark mode support
-- 📋 Add, edit, delete, and update tasks easily
-- ✅ Checkbox to mark tasks as completed (with green highlight)
-- 🔄 Sorted list: completed tasks automatically move to the bottom
-- 🗑️ Swipe left to delete tasks with a confirmation dialog
-- 🎨 Theming: Light & Dark theme compatibility
+
+- ✅ Onboarding screen for first-time users
+- 📋 Add, edit, delete, and mark tasks as completed
+- 🟢 Completed tasks move to the bottom automatically (sorted list)
+- ✏️ Edit tasks anytime
+- 🗑️ Swipe left to delete tasks with confirmation dialog
+- 🎨 Strike-through & faded UI for completed tasks
+- 🌙 Dark/Light Theme support with Material 3
+- 💾 Offline persistence with Room database
+- 📱 Built fully using Jetpack Compose
 
 ---
 
-## 📸 Screenshots
+## 🛠 Tech Stack
 
-### Splash Screen
-<img src="screenshots/Splash_Screen.jpg" width="250"/>
+| Layer         | Tools & Libraries                            |
+|---------------|----------------------------------------------|
+| UI            | Jetpack Compose, Material3                   |
+| Architecture  | MVVM, StateFlow, ViewModel                   |
+| Local Storage | Room Database                                |
+| Navigation    | Navigation Compose                           |
+| State Saving  | DataStore Preferences (optional)             |
 
-### Onboarding
-<img src="screenshots/OnBoarding1.jpg" width="250"/>
-<img src="screenshots/OnBoarding2.jpg" width="250"/>
-<img src="screenshots/OnBoarding3.jpg" width="250"/>
+---
 
-### Home Screen
-<img src="screenshots/Home_Screen.jpg" width="250"/>
+## 📱 Screenshots
 
-### Add Task
-<img src="screenshots/Add_Tasks.jpg" width="250"/>
+### 🟣 Splash & Onboarding
 
-### Edit Task
-<img src="screenshots/Edit_Tasks.jpg" width="250"/>
+<table>
+  <tr>
+    <td><b>Splash</b></td>
+    <td><b>Onboarding 1</b></td>
+    <td><b>Onboarding 2</b></td>
+    <td><b>Onboarding 3</b></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/Splash_Screen.jpg" width="200"/></td>
+    <td><img src="screenshots/OnBoarding1.jpg" width="200"/></td>
+    <td><img src="screenshots/OnBoarding2.jpg" width="200"/></td>
+    <td><img src="screenshots/OnBoarding3.jpg" width="200"/></td>
+  </tr>
+</table>
 
-### Delete Task
-<img src="screenshots/Delete_Tasks.jpg" width="250"/>
+---
+
+### 🟢 Home & Add/Edit Tasks
+
+<table>
+  <tr>
+    <td><b>Home</b></td>
+    <td><b>Add Task</b></td>
+    <td><b>Edit Task</b></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/Home_Screen.jpg" width="250"/></td>
+    <td><img src="screenshots/Add_Tasks.jpg" width="250"/></td>
+    <td><img src="screenshots/Edit_Tasks.jpg" width="250"/></td>
+  </tr>
+
+</table>
+
+---
+
+### 🔵 Delete Task
+
+<p align="center">
+  <img src="screenshots/Delete_Tasks.jpg" width="250"/>
+</p>
