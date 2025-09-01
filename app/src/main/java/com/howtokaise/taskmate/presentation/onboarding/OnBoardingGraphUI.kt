@@ -51,7 +51,7 @@ fun OnBoardingGraphUI(OnBoardingModel : OnBoardingModel) {
             style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurface
         )
-        Spacer(modifier = Modifier.height(60.dp))
+        Spacer(modifier = Modifier.height(50.dp))
     }
 
 }
